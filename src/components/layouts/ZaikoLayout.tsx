@@ -13,7 +13,6 @@ export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => 
       <Head>
         <title>{title}</title>
         <meta name="description" content={pageDescription} />
-
       </Head>
 
       <nav>
@@ -30,5 +29,3 @@ export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => 
     </>
   )
 }
-
-
