@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import Head from "next/head"
+import { Roboto } from 'next/font/google'
 
 import { Navbar } from "../ui";
 
@@ -9,6 +10,12 @@ interface Props {
   pageDescription: string;
 }
 
+const roboto = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => {
   return (
     <>
@@ -17,13 +24,18 @@ export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => 
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content={pageDescription} />
+
+        <style jsx global>{`
+        html {
+          font-family: 'Roboto';
+        }
+      `}</style>
+
       </Head>
 
-      <nav>
-        <Navbar />
-      </nav>
+      <Navbar />
 
-      <main style={{ margin: '80px', maxWidth: '1440px', padding: '0px 30px' }}>
+      <main style={{ margin: '80px 0', padding: '0px 30px' }}>
         {children}
       </main>
 
