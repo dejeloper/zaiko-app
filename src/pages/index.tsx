@@ -2,6 +2,7 @@ import { NextPage } from "next";
 
 import { ZaikoLayout } from "@/components/layouts";
 import { menuInitial } from "@/settings/menu";
+import Link from "next/link";
 
 
 const Home: NextPage = () => {
@@ -16,11 +17,11 @@ const Home: NextPage = () => {
           menuInitial.menusHome.map((menu) => (
             <article key={menu.id}>
               <header className="rounded-md border border-black/1 shadow-md shadow-black/20 flex justify-center items-center">
-                <button>
+                <Link href={menu.url}>
                   <picture>
                     <img src={`images/menus/${menu.image}`} alt={menu.descriptionMenu} style={{ height: '160px' }} />
                   </picture>
-                </button>
+                </Link>
               </header>
               <footer className=" py-4 px-2 flex justify-center items-center">
                 <span className="font-bold font-ro">

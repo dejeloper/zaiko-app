@@ -12,7 +12,7 @@ export const Navbar = () => {
           </h2>
         </Link>
       </section>
-      <section className="flex flex-grow">
+      <section className="flex">
         <div className="hidden sm:block">
           <a href="/customers" className="btn-nav">
             Clientes
