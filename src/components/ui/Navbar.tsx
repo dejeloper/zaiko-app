@@ -1,7 +1,12 @@
+import { Dispatch, FC, SetStateAction } from "react";
 import Link from "next/link";
 import SearchIcon from "../icons/SearchIcon";
 
-export const Navbar = () => {
+interface INavbar {
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export const Navbar: FC<INavbar> = ({ setIsOpen }) => {
   return (
     <nav className="flex items-center top-0 fixed bg-white h-[60px] w-full px-6">
       <section className="flex flex-grow justify-start w-auto whitespace-nowrap">
@@ -29,7 +34,7 @@ export const Navbar = () => {
         <button className="btn-nav-icon">
           <SearchIcon width={24} height={24} />
         </button>
-        <button className="btn-nav">
+        <button className="btn-nav" onClick={() => setIsOpen(true)}>
           Menú
         </button>
       </section>

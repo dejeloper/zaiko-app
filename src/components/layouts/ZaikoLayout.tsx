@@ -1,8 +1,8 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useState } from "react";
 import Head from "next/head"
 import { Roboto } from 'next/font/google'
 
-import { Navbar } from "../ui";
+import { Navbar, SideMenu } from "../ui";
 
 interface Props {
   children: ReactNode;
@@ -17,6 +17,7 @@ const roboto = Roboto({
   display: 'swap',
 });
 export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Head>
@@ -33,9 +34,11 @@ export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => 
 
       </Head>
 
-      <Navbar />
+      <Navbar setIsOpen={setIsOpen} />
 
       <main style={{ margin: '80px 0', padding: '0px 30px' }}>
+        <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} > Hola</SideMenu>
+
         {children}
       </main>
 
