@@ -58,7 +58,7 @@ export const menuNav: IMenuNav[] = [
     name: "Clientes",
     descriptionMenu: "Clientes",
     url: "/customers",
-    icon: "user-heart-line"
+    icon: "folder-user-line"
   },
   {
     id: 2,
@@ -101,12 +101,38 @@ export const menuNav: IMenuNav[] = [
     descriptionMenu: "Reportes",
     url: "/reports",
     icon: "database-line"
+  }
+]
+
+
+export const menuAdmin: IMenuNav[] = [
+  {
+    id: 1,
+    name: "Cuenta",
+    descriptionMenu: "Cuenta",
+    url: "/me",
+    icon: "user-3-line"
   },
   {
-    id: 99,
+    id: 2,
+    name: "Cambio Contraseña",
+    descriptionMenu: "Cambio Contraseña",
+    url: "/password",
+    icon: "lock-password-line"
+  },
+  {
+    id: 3,
+    name: "Notificaciones",
+    descriptionMenu: "Notificaciones",
+    url: "/notifications",
+    icon: "message-2-line"
+  },
+  {
+    id: 4,
     name: "Salir",
     descriptionMenu: "Cerrar Sesión",
     url: "/logout",
     icon: "logout-box-line"
-  }
-] 
+  },
+
+];
