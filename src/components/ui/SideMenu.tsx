@@ -1,4 +1,4 @@
-import { menuNav } from "@/settings/menu";
+import { menuAdmin, menuNav } from "@/settings/menu";
 import Link from "next/link";
 import { Dispatch, FC, SetStateAction } from "react";
 import 'remixicon/fonts/remixicon.css'
@@ -20,7 +20,7 @@ export const SideMenu: FC<ISideMenu> = ({ isOpen, setIsOpen }) => {
     >
       <section
         className={
-          " w-[300px] max-w-lg right-0 absolute bg-white h-full shadow-xl delay-100 duration-200 ease-in-out transition-all transform  " +
+          " w-[300px] max-w-lg right-0 absolute bg-white h-full shadow-xl delay-100 duration-200 ease-in-out transition-all transform overflow-y-auto " +
           (isOpen ? " translate-x-0 " : " translate-x-full ")
         }
       >
@@ -34,11 +34,27 @@ export const SideMenu: FC<ISideMenu> = ({ isOpen, setIsOpen }) => {
             }}>✖</button>
           </header>
         </article>
-        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto h-full px-4 border-t border-black/40">
+        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto   px-4 border-t border-black/40">
           <main className="list">
             <ul>
               {
                 menuNav.map(({ id, name, icon, url }) => (
+                  <li key={id}>
+                    <Link href={url} className="flex flex-row justify-start items-center w-full px-3 py-3 rounded-lg text-[13px] hover:bg-black/5 font-medium transition ease-in-out duration-300 my-2">
+                      <i className={`ri-${icon} text-xl`}></i>
+                      <span className=" ml-4">{name}</span>
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </main>
+        </article>
+        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto   px-4 border-t border-black/40">
+          <main className="list">
+            <ul>
+              {
+                menuAdmin.map(({ id, name, icon, url }) => (
                   <li key={id}>
                     <Link href={url} className="flex flex-row justify-start items-center w-full px-3 py-3 rounded-lg text-[13px] hover:bg-black/5 font-medium transition ease-in-out duration-300 my-2">
                       <i className={`ri-${icon} text-xl`}></i>
