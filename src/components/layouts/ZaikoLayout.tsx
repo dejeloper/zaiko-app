@@ -37,7 +37,7 @@ export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => 
       <Navbar setIsOpen={setIsOpen} />
 
       <main style={{ margin: '80px 0', padding: '0px 30px' }}>
-        <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} > Hola</SideMenu>
+        <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
 
         {children}
       </main>
