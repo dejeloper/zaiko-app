@@ -8,10 +8,12 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <ZaikoLayout title={"Zaiko - Inicio"} pageDescription={"Este es la página de Inicio"}>
-      <h2 className="text-3xl font-semibold">
-        Inicio
-      </h2>
-      <h4 className="text-md font-normal mb-4">Hola, ¿En qué vamos a trabajar hoy?</h4>
+      <header className="select-none">
+        <h2 className="text-2xl font-semibold">
+          Inicio
+        </h2>
+        <h4 className="text-sm font-normal mb-6">Hola, ¿En qué vamos a trabajar hoy?</h4>
+      </header>
       <section id="cards" className="grid grid-flow-row xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
         {
           menuHome.map(({ id, name, image, descriptionMenu, url }) => (
