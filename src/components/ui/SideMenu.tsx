@@ -1,6 +1,7 @@
-import { menuInitial } from "@/settings/menu";
+import { menuNav } from "@/settings/menu";
+import Link from "next/link";
 import { Dispatch, FC, SetStateAction } from "react";
-import SearchIcon from "../icons/SearchIcon";
+import 'remixicon/fonts/remixicon.css'
 
 interface ISideMenu {
   isOpen: boolean;
@@ -23,7 +24,7 @@ export const SideMenu: FC<ISideMenu> = ({ isOpen, setIsOpen }) => {
           (isOpen ? " translate-x-0 " : " translate-x-full ")
         }
       >
-        <article className="relative top-0 pb-10 flex flex-col space-y-6 overflow-y-auto h-full p-4">
+        <article className="relative top-0  flex flex-col space-y-2 overflow-y-auto  p-4 ">
           <header className="flex flex-row justify-between items-center text-[13px] font-medium">
             <span className="justify-start select-none">
               Menú
@@ -32,20 +33,22 @@ export const SideMenu: FC<ISideMenu> = ({ isOpen, setIsOpen }) => {
               setIsOpen(false);
             }}>✖</button>
           </header>
-          <div className="list">
+        </article>
+        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto h-full px-4 border-t border-black/40">
+          <main className="list">
             <ul>
               {
-                menuInitial.menusHome.map(({ id, name }) => (
+                menuNav.map(({ id, name, icon, url }) => (
                   <li key={id}>
-                    <button className="flex flex-row justify-start items-center w-full text-[13px] font-normal hover:bg-black/5 p-2 my-2">
-                      <SearchIcon width={18} height={18} className="flex " />
+                    <Link href={url} className="flex flex-row justify-start items-center w-full px-3 py-3 rounded-lg text-[13px] hover:bg-black/5 font-medium transition ease-in-out duration-300 my-2">
+                      <i className={`ri-${icon} text-xl`}></i>
                       <span className=" ml-4">{name}</span>
-                    </button>
+                    </Link>
                   </li>
                 ))
               }
             </ul>
-          </div>
+          </main>
         </article>
 
       </section>
