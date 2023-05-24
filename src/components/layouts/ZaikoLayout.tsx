@@ -16,6 +16,7 @@ const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
 });
+
 export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -26,25 +27,20 @@ export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => 
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content={pageDescription} />
 
-        <style jsx global>{`
-        html {
-          font-family: 'Roboto';
-        }
-      `}</style>
-
       </Head>
+      <div className={roboto.className}>
+        <Navbar setIsOpen={setIsOpen} />
 
-      <Navbar setIsOpen={setIsOpen} />
+        <main style={{ margin: '80px 0', padding: '0px 30px' }} >
+          <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      <main style={{ margin: '80px 0', padding: '0px 30px' }}>
-        <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+          {children}
+        </main>
 
-        {children}
-      </main>
+        <footer>
 
-      <footer>
-
-      </footer>
+        </footer>
+      </div>
     </>
   )
 }
