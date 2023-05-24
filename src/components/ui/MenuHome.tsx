@@ -1,5 +1,4 @@
 import { MenuHomeCard } from "./";
-import { IMenuHome } from "@/interfaces/menus";
 
 import { menuHome } from "@/settings/menu";
 
