@@ -1,18 +1,4 @@
-interface IMenuHome {
-  id: number;
-  name: string;
-  descriptionMenu: string;
-  url: string;
-  image: string;
-}
-
-interface IMenuNav {
-  id: number;
-  name: string;
-  descriptionMenu: string;
-  url: string;
-  icon: string;
-}
+import { IMenuHome, IMenuNav } from "@/interfaces/menus"
 
 export const menuHome: IMenuHome[] = [
   {
