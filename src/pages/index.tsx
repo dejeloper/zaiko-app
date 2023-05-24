@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         Inicio
       </h2>
       <h4 className="text-md font-normal mb-4">Hola, ¿En qué vamos a trabajar hoy?</h4>
-      <section id="cards" className="grid grid-flow-row grid-cols-3 gap-8 w-full">
+      <section id="cards" className="grid grid-flow-row xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
         {
           menuInitial.menusHome.map((menu) => (
             <article key={menu.id}>
