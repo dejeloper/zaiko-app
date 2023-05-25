@@ -9,4 +9,25 @@
   .btn-nav-icon {
     @apply p-[8px] rounded-full text-[24px] text-black/40 hover:bg-black/5 border border-black/10 font-normal transition ease-in-out duration-300;
   }
+  .btn {
+    @apply px-4 py-2 my-2 mx-4 text-xs font-medium text-center rounded;
+  }
+  .btn-primary {
+    @apply text-white hover:text-[#6b63ff] bg-[#6b63ff] hover:bg-transparent outline outline-1 outline-[#6b63ff];
+  }
+  .btn-primary-alt {
+    @apply text-white  bg-[#6b63ff] hover:bg-[#6b63ffdc] outline outline-1 hover:outline-[#6b63ff];
+  }
+  .btn-primary-out {
+    @apply text-[#6b63ff] hover:text-white bg-transparent hover:bg-[#6b63ff] outline outline-1 outline-[#6b63ff];
+  }
+  .btn-alternative {
+    @apply text-black hover:text-black/70 bg-black/5 hover:bg-transparent outline outline-1 outline-black/30;
+  }
+  .btn-alternative-alt {
+    @apply text-black hover:text-white bg-black/5 hover:bg-black/40 outline outline-1 outline-black/30;
+  }
+  .btn-alternative-out {
+    @apply hover:text-black text-black/70 hover:bg-black/5 bg-transparent outline outline-1 outline-black/30;
+  }
 }
