@@ -18,15 +18,15 @@ export const Navbar: FC<INavbar> = ({ setIsOpen }) => {
       </section>
       <section className="flex">
         <div className="hidden sm:block">
-          <a href="/customers" className="btn-nav">
-            Clientes
-          </a>
-          <a href="/products" className="btn-nav">
+          <Link href="/products" className="btn-nav">
             Productos
-          </a>
-          <a href="/inventory" className="btn-nav">
+          </Link>
+          <Link href="/inventory" className="btn-nav">
             Inventario
-          </a>
+          </Link>
+          <Link href="/pos" className="btn-nav">
+            POS
+          </Link>
         </div>
       </section>
       <section className="flex flex-grow justify-end">
