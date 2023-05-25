@@ -17,34 +17,41 @@ export const menuHome: IMenuHome[] = [
   },
   {
     id: 3,
+    name: "POS",
+    descriptionMenu: "Ventas POS",
+    url: "/pos",
+    image: "pos.png",
+  },
+  {
+    id: 4,
     name: "Ventas",
     descriptionMenu: "Ventas",
     url: "/sales",
     image: "sales.png",
   },
   {
-    id: 4,
+    id: 5,
     name: "Compras",
     descriptionMenu: "Compras",
     url: "/shop",
     image: "shop.png",
   },
   {
-    id: 5,
+    id: 6,
     name: "Proveedores",
     descriptionMenu: "Proveedores",
     url: "/providers",
     image: "providers.png",
   },
   {
-    id: 6,
+    id: 7,
     name: "Administración",
     descriptionMenu: "Administración",
     url: "/admin",
     image: "admin.png",
   },
   {
-    id: 7,
+    id: 8,
     name: "Reportes",
     descriptionMenu: "Reportes",
     url: "/reports",
@@ -69,34 +76,41 @@ export const menuNav: IMenuNav[] = [
   },
   {
     id: 3,
+    name: "POS",
+    descriptionMenu: "Ventas POS",
+    url: "/pos",
+    icon: "shopping-bag-3-line"
+  },
+  {
+    id: 4,
     name: "Ventas",
     descriptionMenu: "Ventas",
     url: "/sales",
     icon: "shopping-cart-2-line"
   },
   {
-    id: 4,
+    id: 5,
     name: "Compras",
     descriptionMenu: "Compras",
     url: "/shop",
     icon: "shopping-basket-line"
   },
   {
-    id: 5,
+    id: 6,
     name: "Proveedores",
     descriptionMenu: "Proveedores",
     url: "/providers",
     icon: "truck-line"
   },
   {
-    id: 6,
+    id: 7,
     name: "Administración",
     descriptionMenu: "Administración",
     url: "/admin",
     icon: "team-line"
   },
   {
-    id: 7,
+    id: 8,
     name: "Reportes",
     descriptionMenu: "Reportes",
     url: "/reports",
