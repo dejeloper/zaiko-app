@@ -1,5 +1,5 @@
 import { ZaikoLayout } from "@/components/layouts";
-import Tabs from "@/components/ui/Tabs";
+import { Tabs } from "@/components/ui";
 import { Product } from "@/interfaces/products";
 import { products } from "@/services/products";
 
@@ -14,7 +14,15 @@ const SalesPage = () => {
           Punto de Venta
         </h2>
       </header>
-      <Tabs />
+      <Tabs index={1} id={"mesas"} name={"Venta de Mesas"} >
+        <p className="text-sm text-gray-500 dark:text-gray-400">Este es el apartado de <strong className="font-medium text-gray-800 dark:text-white">Venta de Mesas</strong>. Esta es la tab respectiva</p>
+      </Tabs>
+      <Tabs index={2} id={"pos"} name={"Punto de Venta"} >
+        <p className="text-sm text-gray-500 dark:text-gray-400">Este es el apartado de <strong className="font-medium text-gray-800 dark:text-white">Punto de Venta</strong>. Esta es la tab respectiva</p>
+      </Tabs>
+      <Tabs index={3} id={"domicilios"} name={"Domicilios"} >
+        <p className="text-sm text-gray-500 dark:text-gray-400">Este es el apartado de <strong className="font-medium text-gray-800 dark:text-white">Domicilios</strong>. Esta es la tab respectiva</p>
+      </Tabs>
       <main className="hidden">
         <div className="max-w-2xl mx-auto">
 
