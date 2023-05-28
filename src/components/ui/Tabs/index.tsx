@@ -11,7 +11,7 @@ export const Tabs: FC<Props> = ({ tabs }) => {
   const [toggleState, setToggleState] = useState(1);
   return (
     <>
-      <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
+      <div className="mb-1 border-b border-gray-200">
         <ul className="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
           {
             tabs.map((tab) => {
@@ -32,7 +32,6 @@ export const Tabs: FC<Props> = ({ tabs }) => {
                 {children}
               </TabContent>
             )
-
           })
         }
       </div>

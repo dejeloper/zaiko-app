@@ -33,7 +33,7 @@ export const Navbar: FC<INavbar> = ({ setIsOpen }) => {
         <button className="relative items-center mr-2" title="Notificaciones">
           <i className="btn-nav-icon ri-message-2-line text-[18px]"></i>
           <span className="sr-only">Notificaciones</span>
-          <div className="absolute inline-flex items-center justify-center w-6 h-6 text-[10px] font-bold text-white bg-red-500 border-2 border-white rounded-full -top-3 -right-3 dark:border-gray-900">
+          <div className="absolute inline-flex items-center justify-center w-6 h-6 text-[10px] font-bold text-white bg-red-500 border-2 border-white rounded-full -top-3 -right-3">
             24
           </div>
         </button>
