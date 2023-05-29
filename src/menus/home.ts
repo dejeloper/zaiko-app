@@ -1,6 +1,6 @@
-import { IMenuHome, IMenuNav } from "@/interfaces/menus"
+import { IMenuGeneral, IMenuNav } from "@/interfaces/menus"
 
-export const menuHome: IMenuHome[] = [
+export const menuHome: IMenuGeneral[] = [
   {
     id: 1,
     name: "Clientes",
@@ -117,7 +117,6 @@ export const menuNav: IMenuNav[] = [
     icon: "database-line"
   }
 ]
-
 
 export const menuAdmin: IMenuNav[] = [
   {

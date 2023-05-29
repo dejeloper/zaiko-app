@@ -1,4 +1,4 @@
-import { menuAdmin, menuNav } from "@/settings/menu";
+import { menuAdmin, menuNav } from "@/menus/home";
 import Link from "next/link";
 import { Dispatch, FC, SetStateAction } from "react";
 import 'remixicon/fonts/remixicon.css'

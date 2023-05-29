@@ -1,9 +1,9 @@
 import { FC } from "react";
 import Link from "next/link";
-import { IMenuHome } from "@/interfaces/menus";
+import { IMenuGeneral } from "@/interfaces/menus";
 
 interface Props {
-  menu: IMenuHome;
+  menu: IMenuGeneral;
 }
 
 export const MenuHomeCard: FC<Props> = ({ menu }) => {

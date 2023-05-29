@@ -1,9 +1,9 @@
-export interface IMenuHome {
+export interface IMenuGeneral {
   id: number;
   name: string;
   descriptionMenu: string;
   url: string;
-  image: string;
+  image?: string;
 }
 
 export interface IMenuNav {
