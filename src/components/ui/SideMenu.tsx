@@ -24,7 +24,7 @@ export const SideMenu: FC<ISideMenu> = ({ isOpen, setIsOpen }) => {
           (isOpen ? " translate-x-0 " : " translate-x-full ")
         }
       >
-        <article className="relative top-0  flex flex-col space-y-2 overflow-y-auto  p-4 ">
+        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto p-4 ">
           <header className="flex flex-row justify-between items-center text-[13px] font-medium">
             <span className="justify-start select-none">
               Menú
@@ -34,7 +34,7 @@ export const SideMenu: FC<ISideMenu> = ({ isOpen, setIsOpen }) => {
             }}>✖</button>
           </header>
         </article>
-        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto   px-4 border-t border-black/40">
+        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto px-4 border-t border-black/40">
           <main className="list">
             <ul>
               {
@@ -50,7 +50,7 @@ export const SideMenu: FC<ISideMenu> = ({ isOpen, setIsOpen }) => {
             </ul>
           </main>
         </article>
-        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto   px-4 border-t border-black/40">
+        <article className="relative top-0 flex flex-col space-y-2 overflow-y-auto px-4 border-t border-black/40">
           <main className="list">
             <ul>
               {
