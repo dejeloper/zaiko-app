@@ -4,7 +4,7 @@ interface Props {
   id: number
 }
 
-export const Tables: FC<Props> = ({ id }) => {
+export const SalesTable: FC<Props> = ({ id }) => {
   return (
     <div className="m-4">
       {

@@ -1,4 +1,4 @@
-import { Tables } from "./Tables"
+import { SalesTable } from "./SalesTable"
 
 const listTables = [
   {
@@ -18,7 +18,7 @@ const listTables = [
   },
 ]
 
-export const ListTable = () => {
+export const SalesTableList = () => {
   return (
     <>
       <h4>Lista de Mesas</h4>
@@ -26,7 +26,7 @@ export const ListTable = () => {
         {
           listTables.map((t) => {
             return (
-              <Tables key={t.id} id={t.id} />
+              <SalesTable key={t.id} id={t.id} />
             )
           })
         }
