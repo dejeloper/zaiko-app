@@ -16,7 +16,7 @@
     @apply text-white hover:text-[#6b63ff] bg-[#6b63ff] hover:bg-transparent outline outline-1 outline-[#6b63ff];
   }
   .btn-primary-alt {
-    @apply text-white  bg-[#6b63ff] hover:bg-[#6b63ffdc] outline outline-1 hover:outline-[#6b63ff];
+    @apply text-white bg-[#6b63ff] hover:bg-[#6b63ffdc] outline outline-1 hover:outline-[#6b63ff];
   }
   .btn-primary-out {
     @apply text-[#6b63ff] hover:text-white bg-transparent hover:bg-[#6b63ff] outline outline-1 outline-[#6b63ff];
