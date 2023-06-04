@@ -31,10 +31,14 @@ export const ZaikoLayout: FC<Props> = ({ children, title, pageDescription }) => 
       <div className={roboto.className}>
         <Navbar setIsOpen={setIsOpen} />
 
-        <main style={{ margin: '80px 0', padding: '0px 30px' }} >
+        <main className="my-[80px] xxs:mx-2 xs:mx-2 xxs:px-2.5 xs:px-[30px]">
           <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
 
-          {children}
+          <div className="flex flex-row justify-center">
+            <div className="xxs:w-full md:w-[90%] lg:w-[80%]">
+              {children}
+            </div>
+          </div>
         </main>
 
         <footer>
