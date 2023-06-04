@@ -30,15 +30,15 @@ const SalesPage = () => {
 
   return (
     <ZaikoLayout title={"Pos - Punto de Venta"} pageDescription={"Punto de venta - Venta inmediata"} >
-      <header className="select-none">
+      <section className="select-none">
         <h2 className="text-2xl font-semibold">
           Ventas
         </h2>
-      </header>
+      </section>
 
-      <main>
+      <section>
         <Tabs tabs={tabs} />
-      </main>
+      </section>
     </ZaikoLayout>
   )
 }
