@@ -20,7 +20,7 @@ const listTables = [
 
 export const SalesTableList = () => {
   return (
-    <>
+    <div className="p-4">
       <h4>Lista de Mesas</h4>
       <div className="grid xxs:grid-cols-2 md:grid-cols-3 justify-center text-center border border-black">
         {
@@ -31,6 +31,6 @@ export const SalesTableList = () => {
           })
         }
       </div>
-    </>
+    </div>
   )
 }
