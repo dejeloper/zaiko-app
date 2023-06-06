@@ -1,6 +1,25 @@
 import { useEffect, useState } from "react"
 import { SalesTableList } from "../SalesTable/SalesTableList"
 
+const listZones = [
+  {
+    id: 0,
+    name: 'Todas',
+  },
+  {
+    id: 1,
+    name: 'Sala 1',
+  },
+  {
+    id: 2,
+    name: 'Sala 2',
+  },
+  {
+    id: 3,
+    name: 'Sala Exterior',
+  },
+]
+
 const listTables = [
   {
     id: 1,
@@ -96,6 +115,7 @@ const listTables = [
 
 export const Tables = () => {
   const [textInformation, setTextInformation] = useState("")
+  const [zoneCurrent, setZoneCurrent] = useState("Sala 1")
   let countTable = 0;
   let countTableEnabled = 0;
   let countTableDisabled = 0;
@@ -110,69 +130,64 @@ export const Tables = () => {
     })
   }
 
+  // const changeZone = (event) => {
+  //   debugger
+  //   const values = event.target.value;
+  //   console.log(values);
+  //   // setZoneCurrent()
+  // }
+
   conteo();
 
   return (
     <div className='grid xxs:grid-cols-1 xs:grid-cols-2 gap-2'>
-      <div className="bg-black/5">
+      <div className="bg-[#f1f1f1]">
         {/* <SalesTableList /> */}
         <div className="p-4">
-          <h4>Lista de Mesas</h4>
+          <h4 className="tab-content-title">Lista de Mesas</h4>
           <div className="grid xxs:grid-cols-2 md:grid-cols-3 justify-center text-center border border-black">
             {
               listTables.map((t) => {
+                debugger
+                if (t.zone === zoneCurrent || zoneCurrent === "Todas") {
+                  return (
+                    // <SalesTable key={t.id} id={t.id} />
+                    <div className="m-4" key={t.id}>
+                      {
+                        t.id &&
+                        <button onClick={() => {
+                          setTextInformation(t.textInformation)
 
-                return (
-                  // <SalesTable key={t.id} id={t.id} />
-                  <div className="m-4" key={t.id}>
-                    {
-                      t.id &&
-                      <button onClick={() => {
-                        setTextInformation(t.textInformation)
-
-                      }}>
-                        <div className={`flex flex-col justify-center items-center mx-auto rounded-md border border-black w-[80px] h-[80px] ${t.enabled ? 'bg-green-500' : 'bg-red-400'}`}>
-                          {t.id.toString()}
-                        </div>
-                      </button>
-                    }
-                  </div>
-                )
+                        }}>
+                          <div className={`flex flex-col justify-center items-center mx-auto rounded-md border border-black w-[80px] h-[80px] ${t.enabled ? 'bg-green-500' : 'bg-red-400'}`}>
+                            {t.id.toString()}
+                          </div>
+                        </button>
+                      }
+                    </div>
+                  )
+                }
               })
             }
           </div>
         </div>
       </div>
-      <div className="bg-blue-500">
-        <h4>Información</h4>
-        {
-          textInformation &&
-          <p>
-            {
-              textInformation
-            }
-          </p>
-        }
-        {
-          countTable &&
-          <>
-            <p>
+      <div className="bg-[#f1f1f1] ">
+        <div className="p-4">
+          <h4 className="tab-content-title">Información General</h4>
+          <section className="tab-content-body">
+            <h3 className="tab-content-subtitle">Zonas</h3>
+            <select className="my-4" onChange={e => setZoneCurrent(e.target.value)} defaultValue={zoneCurrent} >
               {
-                countTable.toString()
+                listZones.map((zone) => {
+                  return (
+                    <option value={zone.name} key={zone.id}  >{zone.name}</option>
+                  )
+                })
               }
-            </p>
-            <p>
-              {
-                countTableEnabled.toString()
-              }
-            </p>
-            <p>
-              {
-                countTableDisabled.toString()
-              }
-            </p>
-          </>
-        }
+            </select>
+          </section>
+        </div>
       </div>
     </div>
   )
