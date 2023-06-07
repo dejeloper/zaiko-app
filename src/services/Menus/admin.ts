@@ -1,4 +1,4 @@
-import { IMenuGeneral } from "@/interfaces/menus";
+import { IMenuGeneral } from "@/interfaces/Menus";
 
 export const adminList: IMenuGeneral[] = [
   {

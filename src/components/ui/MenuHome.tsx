@@ -1,6 +1,6 @@
 import { MenuHomeCard } from "./";
 
-import { menuHome } from "@/menus/home";
+import { menuHome } from "@/services/Menus/home";
 
 export const MenuHome = () => {
   return (

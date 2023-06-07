@@ -1,4 +1,4 @@
-import { IMenuGeneral, IMenuNav } from "@/interfaces/menus"
+import { IMenuGeneral, IMenuNav } from "@/interfaces/Menus"
 
 export const menuHome: IMenuGeneral[] = [
   {
