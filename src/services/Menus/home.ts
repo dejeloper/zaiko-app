@@ -17,24 +17,24 @@ export const menuHome: IMenuGeneral[] = [
   },
   {
     id: 3,
-    name: "POS",
-    descriptionMenu: "Ventas POS",
-    url: "/pos",
-    image: "pos.png",
-  },
-  {
-    id: 4,
     name: "Ventas",
     descriptionMenu: "Ventas",
     url: "/sales",
     image: "sales.png",
   },
   {
-    id: 5,
+    id: 4,
     name: "Compras",
     descriptionMenu: "Compras",
     url: "/shop",
     image: "shop.png",
+  },
+  {
+    id: 5,
+    name: "Entrantes/Salientes",
+    descriptionMenu: "Entrantes/Salientes",
+    url: "/bound",
+    image: "bound.png",
   },
   {
     id: 6,
