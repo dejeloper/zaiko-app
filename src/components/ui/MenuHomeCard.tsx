@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
-import { IMenuGeneral } from "@/interfaces/menus";
+import { IMenuGeneral } from "@/interfaces/Menus";
 
 interface Props {
   menu: IMenuGeneral;

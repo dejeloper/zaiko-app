@@ -1,5 +1,5 @@
 import { FC, ReactNode, useState } from "react";
-import { tabs } from '../../../interfaces/tabs';
+import { tabs } from "@/interfaces/tabs";
 import { TabHeader } from "./TabHeader";
 import { TabContent } from './TabContent';
 
