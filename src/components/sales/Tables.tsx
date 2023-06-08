@@ -115,7 +115,7 @@ export const Tables = () => {
           }
           <section className="tab-content-body">
             <h3 className="tab-content-subtitle">Zonas</h3>
-            <select className="my-4 p-4 text-base" onChange={(e) => { changeZone(e) }} defaultValue={zoneCurrent} >
+            <select className="my-4 p-4 text-base border border-black bg-white rounded" onChange={(e) => { changeZone(e) }} defaultValue={zoneCurrent} >
               {
                 listZones.map((zone) => {
                   return (
