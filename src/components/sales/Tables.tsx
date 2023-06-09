@@ -16,19 +16,24 @@ export const Tables = () => {
   }
 
   useEffect(() => {
-    let totalTable = 15;
-    let enabledTable = 6
-    let totalPeople = 60;
-    let enabledPeople = 12;
+    let totalTable = 0
+    let enabledTable = 0
+    let totalPeople = 0
+    let enabledPeople = 0
 
     const conteo = () => {
-      // listTables.forEach((table) => {
-      //   countTable++;
-      //   if (table.enabled)
-      //     countTableEnabled++;
-      //   else
-      //     countTableDisabled++;
-      // })
+      listTables.forEach((table) => {
+
+        if (table.zone === zoneCurrent || zoneCurrent === 0) {
+          console.log(table)
+          totalTable++;
+          totalPeople = totalPeople + table.capacity
+          if (!table.enabled) {
+            enabledTable++
+            enabledPeople = enabledPeople + table.people
+          }
+        }
+      })
 
       const generalTable: ITableResumenSales = {
         zoneCurrent,
