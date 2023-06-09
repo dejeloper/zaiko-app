@@ -92,11 +92,6 @@ export const Tables = () => {
                     {listZones[generalTables.zoneCurrent].name}
                   </span>
                 </p>
-                <p className="tab-content-subtitle">Mesas
-                  <span className="ml-2 font-semibold">
-                    {`${generalTables.enabledTable}/${generalTables.totalTable}`}
-                  </span>
-                </p>
                 <p className="tab-content-subtitle">
                   {
                     generalTables.enabled
@@ -106,6 +101,11 @@ export const Tables = () => {
 
                   Estado
                   <span className="ml-2 font-semibold">{generalTables.enabled ? 'Con Disponibilidad' : 'Sin Disponibilidad'}</span>
+                </p>
+                <p className="tab-content-subtitle">Mesas
+                  <span className="ml-2 font-semibold">
+                    {`${generalTables.enabledTable}/${generalTables.totalTable}`}
+                  </span>
                 </p>
                 <p className="tab-content-subtitle">
                   <i className={`ri-user-fill text-xl mr-2`}></i>
